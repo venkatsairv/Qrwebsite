@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary-container": "#ffede6",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#c3c6d7",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#434655",
+                    "on-secondary-container": "#394c84",
+                    "secondary-container": "#acbfff",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed": "#00174b",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "primary-container": "#2563eb",
+                    "on-background": "#1a1c1c",
+                    "tertiary-container": "#bc4800",
+                    "secondary": "#495c95",
+                    "primary-fixed": "#dbe1ff",
+                    "outline": "#737686",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed-variant": "#31447b",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#943700",
+                    "on-error-container": "#93000a",
+                    "primary": "#004ac6",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .qr-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+        .soft-lift {
+            box-shadow: 0px 4px 20px rgba(0, 74, 198, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f9f9f9] dark:bg-slate-900 bg-opacity-80 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#004ac6] dark:text-[#2563eb]">EtherQR</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">History</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Templates</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">API</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Pricing</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-[#434655] font-semibold hover:text-[#2563eb] transition-colors duration-200">Sign In</button>
+<button class="qr-gradient text-white px-6 py-2.5 rounded-lg font-semibold active:opacity-80 active:scale-[0.98] transition-all duration-200">Create Account</button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero & Generator Section -->
+<section class="pt-16 pb-24 px-8 max-w-7xl mx-auto">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.05em] uppercase rounded-full bg-secondary-container text-on-secondary-container">
+                    Secure Utility
+                </span>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6">
+                    Create Your WiFi QR Code
+                </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed">
+                    Enter your network details to generate a secure WiFi QR code for your guests. No more manual password typing.
+                </p>
+</div>
+<!-- Generator Canvas -->
+<div class="bg-surface-container-low rounded-[24px] p-8 md:p-12 max-w-5xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<!-- Form Side -->
+<div class="space-y-8">
+<div>
+<label class="block text-sm font-bold tracking-wider uppercase text-on-surface-variant mb-3">Network SSID</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">router</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-lg bg-surface-container-lowest border border-outline-variant border-opacity-20 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200" placeholder="e.g. Home_Network_5G" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold tracking-wider uppercase text-on-surface-variant mb-3">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-lg bg-surface-container-lowest border border-outline-variant border-opacity-20 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all duration-200" placeholder="••••••••••••" type="password"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold tracking-wider uppercase text-on-surface-variant mb-3">Encryption Type</label>
+<div class="grid grid-cols-3 gap-4">
+<button class="py-3 px-4 rounded-lg bg-primary text-white font-semibold text-sm">WPA/WPA2</button>
+<button class="py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant border-opacity-20 text-on-surface-variant font-semibold text-sm hover:bg-surface-container-high transition-colors">WEP</button>
+<button class="py-3 px-4 rounded-lg bg-surface-container-lowest border border-outline-variant border-opacity-20 text-on-surface-variant font-semibold text-sm hover:bg-surface-container-high transition-colors">None</button>
+</div>
+</div>
+<button class="w-full qr-gradient text-white py-5 rounded-lg font-bold text-lg shadow-lg active:scale-[0.99] transition-all">
+                            Generate WiFi QR
+                        </button>
+</div>
+<!-- Preview Side -->
+<div class="flex flex-col items-center justify-center">
+<div class="bg-surface-container-lowest p-8 rounded-[24px] soft-lift relative group">
+<div class="absolute -top-4 -right-4 bg-primary text-white p-3 rounded-xl shadow-lg">
+<span class="material-symbols-outlined" data-icon="wifi">wifi</span>
+</div>
+<img alt="WiFi QR Code Preview" class="w-64 h-64 opacity-20 grayscale" data-alt="a minimalist high contrast qr code centered on a clean white background with rounded corners and subtle blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZUFbqMAzs6p6lgLUoF8oenB6ZmcBFrtw-AmVNjkjfrW3IBO1-9XjxZilI0UloxLxZtj-QLoP3Axx1boZAgvOsniWjgg2bIHqZ1XZEZxCx7thALfaWaDETnwyUZ5mqha1BRxESjRiTt77jRh8-a7QCZTEY52_LqCU1JRRoGHmGhnqY1IQ-ZB5CYAoiO1u3RbcoSnMv3XWawy9_jTAL1C3qG7JYi7rPyhl2NZkfpMPpzifiG6QAZmEmxYzIFeSH-Rkv8pSZMd0FKkA"/>
+<div class="mt-6 text-center">
+<p class="text-sm font-bold text-outline uppercase tracking-widest">Preview Area</p>
+<p class="text-xs text-on-surface-variant mt-1 italic">Enter details to update</p>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="flex items-center gap-2 px-6 py-2 rounded-full border border-outline-variant border-opacity-30 text-on-surface-variant font-semibold text-sm hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-sm">download</span> SVG
+                            </button>
+<button class="flex items-center gap-2 px-6 py-2 rounded-full border border-outline-variant border-opacity-30 text-on-surface-variant font-semibold text-sm hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-sm">print</span> Print
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEO Content Section: Editorial Layout -->
+<section class="bg-surface-container-lowest py-24 px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-16">
+<div class="md:col-span-4">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface leading-tight">
+                        Seamless Connectivity for a Modern World
+                    </h2>
+<div class="mt-8 w-12 h-1 bg-primary"></div>
+</div>
+<div class="md:col-span-8 space-y-12">
+<div class="grid sm:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-on-surface">The Guest Experience</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Manually entering complex WiFi passwords is a friction point that can frustrate guests and clients. By utilizing EtherQR's secure WiFi generator, you provide a frictionless "scan-to-connect" experience. It's the digital equivalent of a warm welcome, ensuring your visitors stay connected without the hassle of deciphering handwritten notes or long character strings.
+                            </p>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-on-surface">Security &amp; Encryption</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Our generator supports all modern encryption standards, including WPA2 and the newer WPA3 protocols. When you generate a code with EtherQR, the sensitive data is encoded directly into the artifact, allowing mobile devices to interpret and execute the connection request locally. This eliminates the risk of password interception and ensures your private credentials remain within your physical space.
+                            </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border-l-4 border-primary">
+<p class="text-lg font-medium text-on-surface italic">
+                            "WiFi QR codes are no longer just a convenience; they are a hallmark of a tech-forward home or business environment. They bridge the gap between physical space and digital accessibility."
+                        </p>
+<p class="mt-4 text-sm font-bold uppercase tracking-widest text-primary">— Digital Artifacts Quarterly</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid (Bento Style) -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bento Item 1 -->
+<div class="md:col-span-2 bg-surface-container-high rounded-[24px] p-10 flex flex-col justify-between overflow-hidden relative group">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-weight="fill" style="font-variation-settings: 'FILL' 1;">privacy_tip</span>
+<h4 class="text-2xl font-bold mb-4">Privacy-First Architecture</h4>
+<p class="text-on-surface-variant max-w-md">Your WiFi credentials are never stored on our servers. The generation happens in your browser, ensuring total privacy for your home network.</p>
+</div>
+<div class="absolute -right-12 -bottom-12 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[200px]" data-icon="shield">shield</span>
+</div>
+</div>
+<!-- Bento Item 2 -->
+<div class="bg-primary-container rounded-[24px] p-10 text-white flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-5xl mb-4" data-icon="qr_code_2">qr_code_2</span>
+<h4 class="text-xl font-bold mb-2">High Resolution</h4>
+<p class="text-primary-fixed-dim text-sm">Download your QR codes in vector SVG formats for high-quality printing on decals or cards.</p>
+</div>
+<!-- Bento Item 3 -->
+<div class="bg-surface-container-lowest rounded-[24px] p-10 soft-lift border border-outline-variant border-opacity-10">
+<h4 class="text-xl font-bold mb-4">Why use EtherQR?</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-on-surface-variant text-sm font-medium">No account required for basic generation</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-on-surface-variant text-sm font-medium">Custom branding and logo insertion</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-on-surface-variant text-sm font-medium">Permanent codes that never expire</span>
+</li>
+</ul>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-2 bg-surface-container-low rounded-[24px] p-10 flex items-center justify-between">
+<div class="max-w-xs">
+<h4 class="text-xl font-bold mb-2">Ready to expand?</h4>
+<p class="text-on-surface-variant text-sm">Explore our professional API and templates for business-scale QR management.</p>
+</div>
+<button class="bg-on-surface text-surface px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all">Explore API</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f9f9f9] dark:bg-slate-950 border-t border-opacity-10 border-[#c3c6d7]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-[#434655]">EtherQR</div>
+<div class="flex gap-8">
+<a class="text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Privacy Policy</a>
+<a class="text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Terms</a>
+<a class="text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Help Center</a>
+<a class="text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Status</a>
+</div>
+<div class="text-sm text-[#434655] font-['Inter']">© 2024 EtherQR. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

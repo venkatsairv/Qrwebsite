@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary-container": "#ffede6",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#c3c6d7",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#434655",
+                    "on-secondary-container": "#394c84",
+                    "secondary-container": "#acbfff",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed": "#00174b",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "primary-container": "#2563eb",
+                    "on-background": "#1a1c1c",
+                    "tertiary-container": "#bc4800",
+                    "secondary": "#495c95",
+                    "primary-fixed": "#dbe1ff",
+                    "outline": "#737686",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed-variant": "#31447b",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#943700",
+                    "on-error-container": "#93000a",
+                    "primary": "#004ac6",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .qr-gradient-btn {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 74, 198, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-[#f9f9f9] dark:bg-slate-900 bg-opacity-80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#004ac6] dark:text-[#2563eb]">EtherQR</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">History</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Templates</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">API</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200">Sign In</button>
+<button class="qr-gradient-btn text-white px-6 py-2.5 rounded-lg font-semibold active:opacity-80 active:scale-[0.98] transition-all">Create Account</button>
+</div>
+</div>
+</nav>
+<main class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+<header class="text-center mb-16">
+<span class="label-sm uppercase tracking-widest text-primary font-bold text-xs mb-4 block">Professional QR Engine</span>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-on-surface">Generate Your Artifact</h1>
+<p class="text-on-surface-variant text-lg max-w-xl mx-auto leading-relaxed">Transform links, text, and data into secure, high-fidelity digital touchpoints with a single click.</p>
+</header>
+<!-- QR Generator Interface -->
+<div class="space-y-12">
+<!-- Step 1: Type Selection -->
+<section class="bg-surface-container-low rounded-xl p-2 flex flex-wrap gap-2 justify-center">
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+                    URL
+                </button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="notes">notes</span>
+                    Text
+                </button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="wifi">wifi</span>
+                    WiFi
+                </button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg text-on-surface-variant font-medium hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    Email
+                </button>
+</section>
+<!-- Step 2: Input and Customization Grid -->
+<div class="grid grid-cols-1 gap-8">
+<!-- Input Canvas -->
+<div class="space-y-4">
+<label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant px-1">Destination Content</label>
+<div class="relative group">
+<input class="w-full h-16 px-6 rounded-xl bg-surface-container-lowest border-none outline outline-1 outline-outline-variant/20 focus:outline-primary focus:bg-surface transition-all text-lg text-on-surface placeholder:text-outline-variant" placeholder="https://etherqr.io/your-profile" type="text"/>
+</div>
+</div>
+<!-- Preview and Controls Bento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Main Preview Area -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-12 flex flex-col items-center justify-center ambient-shadow relative overflow-hidden group">
+<!-- Decorative background element -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<!-- The QR "Artifact" -->
+<div class="bg-white p-6 rounded-xl ambient-shadow border border-surface-variant/30 mb-8">
+<img class="w-48 h-48 object-contain" data-alt="minimalist professional QR code mockup with blue accents on a clean white square card with rounded corners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPTyfatTsTsm2ue0Uu9soMXEeKLIKnRnZCZyyEq2uWQ7f3siaU60Mo2lZNOAVu8_N7UBO0Plg_gco01OEBoP6dN_PMESduX-0lwaW7qoond5TUhd2ahdCSImonnulYlPoVLo8VMrQVctPEZkKbWRlHn7WJd0zCYAdHt-E6XNnx15BF8Xdwjks3dNkx-daNMs6g0Se8LarH-QP66DXDuFMtKUyo1BHD-Cy_hTV5n7rIcPpCYNh8WTeRdxjgA8buNIs8KhGxwLW4aao"/>
+</div>
+<div class="flex flex-col items-center text-center">
+<h3 class="text-xl font-bold text-on-surface mb-2">Live Artifact Preview</h3>
+<p class="text-on-surface-variant text-sm">Scan to test. Changes apply instantly.</p>
+</div>
+</div>
+<!-- Customization Panel -->
+<div class="md:col-span-5 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-8 space-y-8">
+<!-- Color Selection -->
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 block">Visual Style</span>
+<div class="flex gap-3">
+<button class="w-10 h-10 rounded-full bg-on-surface border-2 border-primary-container ring-2 ring-offset-2 ring-transparent ring-primary ring-offset-surface-container-low"></button>
+<button class="w-10 h-10 rounded-full bg-primary border-2 border-transparent"></button>
+<button class="w-10 h-10 rounded-full bg-secondary border-2 border-transparent"></button>
+<button class="w-10 h-10 rounded-full bg-tertiary border-2 border-transparent"></button>
+<button class="w-10 h-10 rounded-full bg-white border border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-xs" data-icon="palette">palette</span>
+</button>
+</div>
+</div>
+<!-- Format/Size Selection -->
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 block">Export Format</span>
+<div class="grid grid-cols-2 gap-3">
+<button class="px-4 py-3 rounded-lg bg-surface-container-highest text-on-surface font-semibold text-sm">PNG (High Res)</button>
+<button class="px-4 py-3 rounded-lg bg-surface-container-lowest text-on-surface-variant font-medium text-sm hover:bg-surface-container-highest transition-all">SVG (Vector)</button>
+</div>
+</div>
+<!-- Advanced Features -->
+<div class="pt-4 space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-primary/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<span class="text-sm font-semibold text-on-primary-fixed-variant">Privacy-First Tracking</span>
+</div>
+<div class="w-10 h-5 bg-primary rounded-full relative">
+<div class="absolute right-1 top-1 w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary CTA -->
+<button class="w-full qr-gradient-btn text-white py-5 rounded-xl font-bold text-lg ambient-shadow flex items-center justify-center gap-3 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                            Download QR Code
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Features / Trust Bar -->
+<section class="mt-24 pt-16 border-t border-outline-variant/10 text-center">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<div class="text-2xl font-black text-primary">0%</div>
+<div class="text-xs font-bold uppercase tracking-tighter text-on-surface-variant">Data Tracking</div>
+</div>
+<div class="space-y-2">
+<div class="text-2xl font-black text-primary">∞</div>
+<div class="text-xs font-bold uppercase tracking-tighter text-on-surface-variant">Lifetime Scans</div>
+</div>
+<div class="space-y-2">
+<div class="text-2xl font-black text-primary">4K</div>
+<div class="text-xs font-bold uppercase tracking-tighter text-on-surface-variant">Vector Export</div>
+</div>
+<div class="space-y-2">
+<div class="text-2xl font-black text-primary">24h</div>
+<div class="text-xs font-bold uppercase tracking-tighter text-on-surface-variant">Global Support</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f9f9f9] dark:bg-slate-950 border-t border-opacity-10 border-[#c3c6d7]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-6xl mx-auto">
+<div class="text-lg font-bold text-[#434655]">EtherQR</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-[#434655] font-medium text-sm hover:text-[#2563eb] transition-all" href="#">Privacy Policy</a>
+<a class="text-[#434655] font-medium text-sm hover:text-[#2563eb] transition-all" href="#">Terms</a>
+<a class="text-[#434655] font-medium text-sm hover:text-[#2563eb] transition-all" href="#">Help Center</a>
+<a class="text-[#434655] font-medium text-sm hover:text-[#2563eb] transition-all" href="#">Status</a>
+</div>
+<div class="text-sm text-[#434655]">© 2024 EtherQR. All rights reserved.</div>
+</div>
+</footer>
+</body></html>

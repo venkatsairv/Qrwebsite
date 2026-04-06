@@ -1,11 +1,11 @@
 /* Reset and Base Styles */
-* {
+.dashboard-page * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.page {
+.dashboard-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f1e 100%);
   padding: 40px 20px;
@@ -15,7 +15,7 @@
 }
 
 /* Animated Background */
-.page::before {
+.dashboard-page::before {
   content: '';
   position: fixed;
   top: 0;
@@ -30,14 +30,14 @@
 }
 
 /* Header */
-.header {
+.dashboard-header {
   position: relative;
   z-index: 1;
   margin-bottom: 30px;
   animation: slideDown 0.8s ease-out;
 }
 
-.header h2 {
+.dashboard-header h2 {
   font-size: 28px;
   font-weight: 700;
   background: linear-gradient(135deg, #00f5ff 0%, #b829dd 100%);
@@ -50,7 +50,7 @@
 }
 
 /* Title */
-.title {
+.dashboard-title {
   position: relative;
   z-index: 1;
   font-size: 56px;
@@ -67,7 +67,7 @@
 }
 
 /* Main Container */
-.container {
+.dashboard-container {
   position: relative;
   z-index: 1;
   display: flex;
@@ -78,13 +78,13 @@
 }
 
 /* Left Side */
-.left {
+.dashboard-left {
   flex: 1;
   animation: slideUp 0.8s ease-out 0.4s both;
 }
 
 /* Input Box */
-.input-box {
+.dashboard-input-box {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -98,7 +98,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input-box:hover {
+.dashboard-input-box:hover {
   transform: translateY(-5px) rotateX(5deg);
   box-shadow: 
     0 35px 60px rgba(0, 0, 0, 0.6),
@@ -106,7 +106,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-.input-box label {
+.dashboard-input-box label {
   display: block;
   font-size: 14px;
   color: #888;
@@ -116,7 +116,7 @@
   letter-spacing: 2px;
 }
 
-.input-box input {
+.dashboard-input-box input {
   width: 100%;
   padding: 18px 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -129,7 +129,7 @@
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.input-box input:focus {
+.dashboard-input-box input:focus {
   outline: none;
   border-color: #00f5ff;
   box-shadow: 
@@ -138,11 +138,12 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.input-box input::placeholder {
+.dashboard-input-box input::placeholder {
   color: #555;
 }
 
-.input-box button {
+.dashboard-link-button {
+  display: inline-block;
   background: linear-gradient(135deg, #00f5ff 0%, #00a8ff 100%);
   border: none;
   padding: 16px 32px;
@@ -157,9 +158,11 @@
   box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  text-align: center;
 }
 
-.input-box button::before {
+.dashboard-link-button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -170,17 +173,17 @@
   transition: left 0.5s;
 }
 
-.input-box button:hover::before {
+.dashboard-link-button:hover::before {
   left: 100%;
 }
 
-.input-box button:hover {
+.dashboard-link-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
 }
 
 /* Divider */
-.divider {
+.dashboard-divider {
   text-align: center;
   color: #666;
   font-size: 13px;
@@ -191,8 +194,8 @@
   position: relative;
 }
 
-.divider::before,
-.divider::after {
+.dashboard-divider::before,
+.dashboard-divider::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -201,22 +204,22 @@
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
-.divider::before {
+.dashboard-divider::before {
   left: 0;
 }
 
-.divider::after {
+.dashboard-divider::after {
   right: 0;
 }
 
 /* Grid */
-.grid {
+.dashboard-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.card {
+.dashboard-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -235,7 +238,7 @@
   overflow: hidden;
 }
 
-.card::before {
+.dashboard-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -247,11 +250,11 @@
   transition: opacity 0.3s ease;
 }
 
-.card:hover::before {
+.dashboard-card:hover::before {
   opacity: 1;
 }
 
-.card:hover {
+.dashboard-card:hover {
   transform: translateY(-8px) rotateX(10deg) scale(1.02);
   border-color: rgba(0, 245, 255, 0.3);
   box-shadow: 
@@ -261,7 +264,7 @@
 }
 
 /* Right Side */
-.right {
+.dashboard-right {
   flex: 0 0 400px;
   display: flex;
   flex-direction: column;
@@ -270,7 +273,7 @@
 }
 
 /* Preview Box */
-.preview-box {
+.dashboard-preview-box {
   width: 100%;
   aspect-ratio: 1;
   background: rgba(255, 255, 255, 0.02);
@@ -291,7 +294,7 @@
   overflow: hidden;
 }
 
-.preview-box::before {
+.dashboard-preview-box::before {
   content: '';
   position: absolute;
   width: 200%;
@@ -305,7 +308,7 @@
   animation: shimmer 3s infinite;
 }
 
-.preview-box:hover {
+.dashboard-preview-box:hover {
   border-color: rgba(0, 245, 255, 0.6);
   box-shadow: 
     0 30px 60px rgba(0, 0, 0, 0.6),
@@ -314,7 +317,10 @@
 }
 
 /* Download Button (Right Side) */
-.download-btn {
+.dashboard-download-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
   width: 100%;
   background: linear-gradient(135deg, #b829dd 0%, #8b1fb8 100%);
   color: white;
@@ -332,7 +338,7 @@
   overflow: hidden;
 }
 
-.download-btn::after {
+.dashboard-download-btn::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -349,11 +355,11 @@
   transition: all 0.6s;
 }
 
-.download-btn:hover::after {
+.dashboard-download-btn:hover::after {
   left: 100%;
 }
 
-.download-btn:hover {
+.dashboard-download-btn:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 20px 50px rgba(184, 41, 221, 0.6);
 }
@@ -392,39 +398,39 @@
 
 /* Responsive Design */
 @media (max-width: 1100px) {
-  .container {
+  .dashboard-container {
     flex-direction: column;
   }
 
-  .right {
+  .dashboard-right {
     flex: 1;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
   }
 
-  .title {
+  .dashboard-title {
     font-size: 42px;
   }
 }
 
 @media (max-width: 600px) {
-  .title {
+  .dashboard-title {
     font-size: 32px;
   }
 
-  .grid {
+  .dashboard-grid {
     grid-template-columns: 1fr;
   }
 
-  .input-box,
-  .card {
+  .dashboard-input-box,
+  .dashboard-card {
     padding: 25px;
   }
 }
 
 /* Floating particles effect */
-.particles {
+.dashboard-particles {
   position: fixed;
   top: 0;
   left: 0;
@@ -435,7 +441,7 @@
   overflow: hidden;
 }
 
-.particle {
+.dashboard-particle {
   position: absolute;
   width: 4px;
   height: 4px;

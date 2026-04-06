@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog | EtherQR Insights on QR Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary-container": "#ffede6",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#c3c6d7",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#434655",
+                    "on-secondary-container": "#394c84",
+                    "secondary-container": "#acbfff",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed": "#00174b",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "primary-container": "#2563eb",
+                    "on-background": "#1a1c1c",
+                    "tertiary-container": "#bc4800",
+                    "secondary": "#495c95",
+                    "primary-fixed": "#dbe1ff",
+                    "outline": "#737686",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed-variant": "#31447b",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#943700",
+                    "on-error-container": "#93000a",
+                    "primary": "#004ac6",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 74, 198, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.02);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f9f9f9] bg-opacity-80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-2xl font-extrabold tracking-tighter text-[#004ac6]">EtherQR</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">History</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Templates</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">API</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Pricing</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="text-[#434655] font-medium hover:text-[#2563eb] transition-all">Sign In</button>
+<button class="primary-gradient text-white px-8 py-2.5 rounded-lg font-semibold shadow-md active:scale-95 transition-all">Create Account</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8">
+<!-- Hero Section -->
+<section class="py-24 flex flex-col items-start max-w-3xl">
+<span class="text-primary font-bold tracking-[0.05em] text-xs uppercase mb-4 px-3 py-1 bg-primary/5 rounded-full">Resources &amp; Insights</span>
+<h1 class="text-6xl font-extrabold tracking-tight text-on-surface mb-6">
+                Insights on QR Technology
+            </h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-2xl">
+                Explore the latest trends in digital connectivity, security protocols, and creative marketing strategies through the lens of QR tech.
+            </p>
+</section>
+<!-- Featured Post (Editorial Layout) -->
+<section class="mb-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center bg-surface-container-low rounded-3xl p-8 md:p-12 overflow-hidden">
+<div class="md:col-span-7 rounded-xl overflow-hidden editorial-shadow">
+<img alt="Featured Post" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Modern tech workspace with glowing digital interfaces and sleek hardware, cinematic lighting with deep blue and cool white tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVkqs0oH5Nt6XVm7LuvPmdojBQbRhfgZETMzseEHKT2o2QxNN2NV_6LSJcNQ2bqVt-ALoBUwZpW98HW_vNsDb0fCnKceVXq_Naangzvndr-lfkUV00hxA0eVfazbmyuNsBtYoRS49ATE3LE5S9G2z3mV0aLA6t1znHhB9Y4JOjWDA2OgM3T90ENm7yAdrPR1DFFKCWNIDiM1O0wC742HtmffUOU5iJkPM_VJQRh7ld3pKQvr_EVk9GBdGGwzU-el-wLjzOW43IYt8"/>
+</div>
+<div class="md:col-span-5">
+<div class="mb-4 flex items-center gap-3">
+<span class="text-primary font-semibold text-sm">Security</span>
+<span class="text-outline-variant text-sm">•</span>
+<span class="text-on-surface-variant text-sm">Oct 24, 2024</span>
+</div>
+<h2 class="text-3xl font-bold tracking-tight mb-4 leading-tight">
+                        The Future of Secure Data Transfer: Encrypted Dynamic QR Codes
+                    </h2>
+<p class="text-on-surface-variant mb-8 line-clamp-3">
+                        As privacy becomes the cornerstone of the digital experience, EtherQR explores how dynamic encryption is redefining the boundaries of scannable information.
+                    </p>
+<a class="inline-flex items-center font-bold text-primary hover:gap-2 transition-all" href="#">
+                        Read Full Story 
+                        <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Blog Grid -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h3 class="text-2xl font-bold tracking-tight">Recent Articles</h3>
+<div class="h-1 w-12 primary-gradient mt-2 rounded-full"></div>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/20 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Card 1 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="Marketing strategy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Minimalist business setting with high-end stationery and a glowing digital smartphone screen showing a clean QR code layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnHdDx0dI7DQLBt3i4p3imzHOXHYKsrzG4d_X608wRn_FfOV-ArRyoj5_l0wEEhRfC664XlpVJcu8zrn2GHo8qMLaCfwBYdVTqT0fCuzrQbXKFGGmPuViRLL_8hD7M1-hh4Zi-DPEVDyzactw7g6_HLWLMSOJBVGvh-iMN36AD3O7j72TSA1dZZzSKJ0JcrJjoJrSlzozh2crWgAk0_Esr6O5b7PIQCpKJK9DMHEjqmUvOv9zOii9C1GYFr9RixD4W0GBHsgl4JA8"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Marketing</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            5 Ways to Use QR Codes in Marketing
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Discover how top-tier brands are leveraging bridge-technology to connect physical touchpoints with digital luxury.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="Analytics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean, futuristic user interface showing data analytics dashboards with soft blue glowing charts and clean typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtwRrVPClQkUcbA-1g24PKq8gz1ceZVv_DrYDWSH5n-ZYaV2V2XLEjhTHkCB7c_otXernnPmGpY1eCOwISQSZYFaInwqGCrKoLQ2JrxcL2lDWCaBhE5sOcuSe2WLqr8rkGjGRBEwqss6TTHfNLojMyeW37nzGqUr4GtqNvD0Z_5Zh5VwFVW8tONxTCr0TcrYEsoqOHZq3Rj7TpV9TbbvLIk09qRzAFNCu8shdRB5Xauigpyoj2VrLR3KtlO-mBBghOkMMpd2V0MRs"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Analytics</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            Real-time Tracking: More Than Just Scans
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Unlocking the behavioral patterns hidden within every scan. How to read your audience without compromising privacy.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="Hospitality" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="An elegant restaurant interior with a minimalist wooden table and a subtle QR menu code, natural soft window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKleU4UMTusFYknug3m7MBGQNOB5KnoE-fB5QFLwfv3v3AtbQ_Ri0YHk_1hs5KFsv7ReZU2mJlNHkFt69CejOQs_v1J2NPHjHTdUOxD9I-zprgbqf80sEfR81PLjVmtSk-jxZRP-9Mbgxvyp5IYRNcvHSwBcr_PfFc_q9M4gJKtm4nwFHg0Bh8Sai9OTCnWViJMWowMO_IfFhuVvI-OeE0ramfvOC6sCkBqZ5UvZTda16j2xXdtE2pwnWzRr84vYUNzIbTzAm8Rjg"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Hospitality</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            The Contactless Revolution in Fine Dining
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            How dynamic menus and instant payments are elevating the guest experience in global culinary destinations.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Macro photography of a high-resolution QR code on premium textured paper with silver foil accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVa6vTPb0qEY9QrkRwJM9NLET25gablIkw7puLJgap6_ka7A_JmI17t2qAsrkxGsShXTWOaq5JqSBPCtPU7qkvc0mUqrINWoqt6TvzS37aEm3dZ0Y4eUzT4wxG6l6xQ0haNkfNPFjO4Lc3Eh_jYLr93yLc4phu4LVBjNYRxbhHVRIhYdPrV9qGTuavxhIbNQmaOH3IicLmd95V6Ksxlghrb57-NSi5QUJcZuaVYxdSVLkk7RAK3cc6M49-43JrbFPnp34ggoVYiTA"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Design</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            Aesthetics Matter: Customizing Your QR
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Moving beyond the black and white. Learn to integrate brand identity into scannable artifacts without losing utility.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="Technology" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Interior of a high-tech data center with glowing server racks and clean white cable management, perspective shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByjhSsHP5z-vN16_A3YJr3pLQSCFkLxYXuZ06MwBQmvYGLsGX-PeiA_vNh1qYbNa--Mv2UmMQW0seDv9vtcDAmv-DaitpfLGYtiaSwvWtITfkhBIprhqUeSk5vzcgMJHsatAcNoHcS92TWr4ZP8zHC1x9eZIK5fqH1ze2ZbTJU5nHei23_uqGGiYQxEDSuW7Djn3251K-VE86LRTkH-ykTyKnvHbku6FQMrAQHXW46_rQEHqgELwgvKQZ7tozA-hxSkYij-qVYeMQ"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Technology</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            The API Economy: Automating Generation
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            Deep dive into EtherQR's developer tools and how to scale QR generation for massive enterprise workflows.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden mb-6 aspect-video bg-surface-container-low editorial-shadow">
+<img alt="E-commerce" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A person holding a tablet showing a secure digital wallet app with soft bokeh background of a modern city at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAD2A0Xwaeu0Pip33hTHULJ8kDNy_Z4Z0v8p549VU-DStu57e52v_8z4_NkfopGbrYVW40Spt0M14P4us_2vCxzT5Se-XoX76690Fg7rj8ta5yGnt2luP6vaNZoh0d5sHU6uthGzupL4ighypP-5i0RzAEd8irRe5NaQe5y8J4PXvcMX1ucsn0mZR8Sp5O4Ifjlt9rm6-foWzX8tQc5PEsugU8Y5lip1nisKkvIQuPYp2a28yAxIbYB3p7wK1BhqnK_rizStwa-Wk"/>
+</div>
+<div class="space-y-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">E-commerce</span>
+<h4 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors">
+                            QR Codes and the Death of the Checkout
+                        </h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                            How "Scan-to-Pay" is simplifying the conversion funnel and reducing cart abandonment in physical retail.
+                        </p>
+<a class="text-primary font-semibold text-sm inline-flex items-center pt-2" href="#">
+                            Read More <span class="material-symbols-outlined text-[18px] ml-1">arrow_outward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-20 flex justify-center">
+<button class="px-10 py-4 bg-surface-container-low text-on-surface font-semibold rounded-xl hover:bg-surface-container-high transition-all editorial-shadow active:scale-95">
+                    Load Older Insights
+                </button>
+</div>
+</section>
+<!-- Newsletter Subscription -->
+<section class="mb-32 bg-primary rounded-[40px] p-12 md:p-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<circle cx="100" cy="0" fill="white" r="100"></circle>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl text-center md:text-left">
+<h2 class="text-white text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Stay ahead of the curve.</h2>
+<p class="text-blue-100 text-lg">Receive a curated monthly digest of QR trends and digital security updates.</p>
+</div>
+<div class="w-full max-w-md">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 rounded-xl bg-white border-none focus:ring-4 focus:ring-white/20 text-on-surface placeholder:text-outline outline-none" placeholder="Your work email" type="email"/>
+<button class="bg-on-surface text-white px-8 py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-lg active:scale-95">Subscribe</button>
+</form>
+<p class="text-blue-200 text-xs mt-4 text-center sm:text-left">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f9f9f9] border-t border-opacity-10 border-[#c3c6d7]">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-lg font-bold text-[#434655]">EtherQR</div>
+<div class="flex gap-8">
+<a class="text-[#434655] font-['Inter'] text-sm hover:text-[#2563eb] transition-all" href="#">Privacy Policy</a>
+<a class="text-[#434655] font-['Inter'] text-sm hover:text-[#2563eb] transition-all" href="#">Terms</a>
+<a class="text-[#434655] font-['Inter'] text-sm hover:text-[#2563eb] transition-all" href="#">Help Center</a>
+<a class="text-[#434655] font-['Inter'] text-sm hover:text-[#2563eb] transition-all" href="#">Status</a>
+</div>
+<div class="font-['Inter'] text-sm text-[#434655]">
+                © 2024 EtherQR. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

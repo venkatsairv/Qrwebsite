@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EtherQR | Premium QR Generation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#ffb59a",
+                    "on-primary-fixed": "#001550",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#004ee8",
+                    "primary": "#0049db",
+                    "on-background": "#191c1d",
+                    "secondary": "#475aa0",
+                    "surface": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "on-surface": "#191c1d",
+                    "tertiary-container": "#c74500",
+                    "inverse-surface": "#2e3132",
+                    "on-surface-variant": "#434656",
+                    "on-secondary-fixed-variant": "#2e4287",
+                    "inverse-primary": "#b6c4ff",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-primary-fixed-variant": "#003ab3",
+                    "tertiary": "#9e3500",
+                    "primary-container": "#2962ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#fff4f1",
+                    "on-secondary-fixed": "#001550",
+                    "on-secondary-container": "#2f4387",
+                    "background": "#f8f9fa",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#dce1ff",
+                    "secondary-container": "#9fb3ff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "outline-variant": "#c3c5d8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "primary-fixed": "#dce1ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#f7f5ff",
+                    "outline": "#737687",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-fixed-variant": "#802a00",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "primary-fixed-dim": "#b6c4ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ethereal-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -12px rgba(25, 28, 29, 0.06);
+        }
+        .ghost-border {
+            outline: 1px solid rgba(195, 197, 216, 0.15);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #0049db 0%, #2962ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 ethereal-blur shadow-sm">
+<div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto w-full">
+<div class="text-2xl font-black text-slate-900 tracking-tighter font-headline">EtherQR</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="font-headline tracking-tight font-semibold text-blue-700 border-b-2 border-blue-600 transition-colors duration-300" href="#">History</a>
+<a class="font-headline tracking-tight font-semibold text-slate-500 hover:text-blue-600 transition-colors duration-300" href="#">Templates</a>
+<a class="font-headline tracking-tight font-semibold text-slate-500 hover:text-blue-600 transition-colors duration-300" href="#">API</a>
+<a class="font-headline tracking-tight font-semibold text-slate-500 hover:text-blue-600 transition-colors duration-300" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-headline tracking-tight font-semibold text-slate-500 hover:text-blue-600 transition-colors px-4 py-2">Sign In</button>
+<button class="primary-gradient text-white px-6 py-2.5 rounded-full font-headline font-semibold scale-105 transition-transform hover:shadow-lg">Create Account</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 px-6 min-h-screen">
+<div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Side: Input & Configuration -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Hero Header -->
+<header class="space-y-4">
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface">
+                        Generate with <span class="text-primary">Clarity.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-lg leading-relaxed">
+                        Create high-resolution, architectural QR codes for physical and digital experiences in seconds.
+                    </p>
+</header>
+<!-- Type Selector Tabs -->
+<div class="flex flex-wrap gap-2">
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2.5 rounded-full font-label text-sm font-semibold transition-all">URL</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2.5 rounded-full font-label text-sm font-semibold hover:bg-surface-container-highest transition-all">Text</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2.5 rounded-full font-label text-sm font-semibold hover:bg-surface-container-highest transition-all">WiFi</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2.5 rounded-full font-label text-sm font-semibold hover:bg-surface-container-highest transition-all">VCard</button>
+<button class="bg-surface-container-high text-on-surface-variant px-6 py-2.5 rounded-full font-label text-sm font-semibold hover:bg-surface-container-highest transition-all">Email</button>
+</div>
+<!-- Input Zone -->
+<div class="space-y-6">
+<div class="relative">
+<label class="block font-label text-xs uppercase tracking-widest text-outline mb-3 ml-1">Destination URL</label>
+<input class="w-full h-20 px-8 rounded-lg bg-surface-container-lowest ghost-border focus:outline-none focus:ring-4 focus:ring-primary/10 focus:border-primary transition-all text-xl font-body" placeholder="https://your-ethereal-link.com" type="text"/>
+</div>
+</div>
+<!-- Bento Grid Customization Features (Visual Depth) -->
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">palette</span>
+<h3 class="font-headline font-bold text-lg">Dynamic Colors</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Adapt QR colors to your brand palette instantly.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">branding_watermark</span>
+<h3 class="font-headline font-bold text-lg">Center Logo</h3>
+<p class="text-sm text-on-surface-variant leading-snug">Embed high-res SVGs directly into the center pattern.</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Preview & Action -->
+<div class="lg:col-span-5 sticky top-32 flex flex-col items-center">
+<!-- QR Code Stage -->
+<div class="relative w-full aspect-square max-w-md bg-surface-container-lowest rounded-lg ambient-shadow flex items-center justify-center p-12 group transition-all hover:scale-[1.01]">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent rounded-lg pointer-events-none"></div>
+<!-- Placeholder for QR Code (Pure CSS/Visual) -->
+<div class="w-full h-full relative p-4 bg-white border-8 border-white rounded-xl">
+<img alt="minimalist high resolution QR code on a white background with a clean geometric pattern and soft rounded corners" class="w-full h-full object-contain" data-alt="minimalist high resolution QR code on a white background with a clean geometric pattern and soft rounded corners" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Q_ovE102ERgxdoBaU3v3JChqkG7dHPuQUG_k_cD1ucAIPKiLBnVceD0kcLZ2-6foMnK4mzfA2XAmwfoKhMk9CqEbuFqWRfN8GlyHIry5R-jG1mB3mu6TDOGuisVpG56MgGrdqEH91uk5c78U1WJFFdmLTth2w5MRt-vW_qnlRFFKjb7RswqNmgz8ipylBoyesGkdnojSHPZhTdXpA6I2aPgOzBn9TZIvE530rJ3LwtPAHTRwcncqmPB5UHJ9oHuCdZNoS1GtiX0"/>
+<!-- Floating Side Toggle -->
+<div class="absolute -right-4 top-1/2 -translate-y-1/2 flex flex-col gap-2">
+<button class="w-12 h-12 bg-surface-container-lowest ambient-shadow rounded-full flex items-center justify-center text-primary hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">settings_suggest</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Customization Panel (Floating Sidebar Style) -->
+<div class="mt-12 w-full max-w-md bg-surface-container-low p-6 rounded-lg ghost-border">
+<div class="flex justify-between items-center mb-6">
+<span class="font-headline font-bold">Customize Design</span>
+<span class="text-xs font-label uppercase tracking-widest text-outline">Pro Feature</span>
+</div>
+<div class="grid grid-cols-4 gap-4 mb-8">
+<div class="h-10 w-10 rounded-full bg-slate-900 ring-2 ring-offset-2 ring-primary cursor-pointer"></div>
+<div class="h-10 w-10 rounded-full bg-blue-600 cursor-pointer"></div>
+<div class="h-10 w-10 rounded-full bg-indigo-500 cursor-pointer"></div>
+<div class="h-10 w-10 rounded-full border-2 border-dashed border-outline-variant flex items-center justify-center text-outline cursor-pointer">
+<span class="material-symbols-outlined text-sm">add</span>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-lowest rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary">add_photo_alternate</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">Upload Brand Logo</p>
+<p class="text-[10px] text-outline uppercase tracking-wider">SVG, PNG or JPEG</p>
+</div>
+</div>
+</div>
+<!-- Primary CTA -->
+<div class="mt-12 w-full max-w-md">
+<button class="primary-gradient w-full py-6 rounded-full text-white font-headline font-bold text-xl ambient-shadow hover:scale-[1.02] transition-transform flex items-center justify-center gap-3">
+                        Download QR
+                        <span class="material-symbols-outlined">download</span>
+</button>
+<p class="mt-4 text-center text-xs text-on-surface-variant font-label tracking-wide uppercase opacity-60">High Resolution Vector (SVG, PDF, PNG)</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Area -->
+<footer class="w-full py-12 bg-slate-50 border-t border-slate-200/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+<div class="font-inter text-xs tracking-widest uppercase text-slate-400">© 2024 EtherQR. Designed for extreme clarity.</div>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="font-inter text-xs tracking-widest uppercase text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Help Center</a>
+<a class="font-inter text-xs tracking-widest uppercase text-slate-400 hover:text-blue-500 transition-colors opacity-80 hover:opacity-100" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

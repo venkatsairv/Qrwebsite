@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdbcd",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-tertiary-container": "#ffede6",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#360f00",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-highest": "#e2e2e2",
+                    "outline-variant": "#c3c6d7",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "secondary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#434655",
+                    "on-secondary-container": "#394c84",
+                    "secondary-container": "#acbfff",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-fixed": "#00174b",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "primary-container": "#2563eb",
+                    "on-background": "#1a1c1c",
+                    "tertiary-container": "#bc4800",
+                    "secondary": "#495c95",
+                    "primary-fixed": "#dbe1ff",
+                    "outline": "#737686",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-fixed-variant": "#31447b",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#943700",
+                    "on-error-container": "#93000a",
+                    "primary": "#004ac6",
+                    "surface-tint": "#0053db",
+                    "on-primary-fixed-variant": "#003ea8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-button {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+        .soft-lift {
+            box-shadow: 0px 4px 20px rgba(0, 74, 198, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.02);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#f9f9f9] dark:bg-slate-900 bg-opacity-80 backdrop-blur-xl">
+<nav class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tighter text-[#004ac6] dark:text-[#2563eb]">EtherQR</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">History</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">Templates</a>
+<a class="text-[#434655] font-medium hover:text-[#2563eb] transition-colors duration-200" href="#">API</a>
+<a class="text-[#004ac6] font-semibold border-b-2 border-[#004ac6] pb-1 hover:text-[#2563eb] transition-colors duration-200" href="#">Pricing</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#434655] font-medium hover:text-[#2563eb] px-4 py-2">Sign In</button>
+<button class="gradient-button text-white px-6 py-2 rounded-lg font-semibold active:opacity-80 active:scale-[0.98] transition-all">Create Account</button>
+</div>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative pt-24 pb-16 px-8 flex flex-col items-center text-center">
+<span class="uppercase tracking-[0.2em] text-[10px] font-bold text-primary mb-4 bg-primary/5 px-3 py-1 rounded-full">Transparent Plans</span>
+<h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface max-w-4xl mb-6">
+                Simple, Transparent Pricing
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mb-12 leading-relaxed">
+                Choose the plan that fits your digital ecosystem. From quick static codes to advanced dynamic analytics, we treat every QR as a premium artifact.
+            </p>
+</section>
+<!-- Pricing Cards Section -->
+<section class="max-w-6xl mx-auto px-8 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<!-- Free Tier -->
+<div class="bg-surface-container-low p-1 rounded-xl">
+<div class="bg-surface-container-lowest h-full p-10 rounded-lg flex flex-col soft-lift">
+<div class="mb-8">
+<h2 class="text-2xl font-bold mb-2">Free</h2>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold">$0</span>
+<span class="text-on-surface-variant text-sm">/forever</span>
+</div>
+</div>
+<div class="flex-grow">
+<ul class="space-y-5">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline size-5 flex items-center justify-center text-sm" data-icon="check">check</span>
+<span class="text-on-surface-variant">Static QR</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline size-5 flex items-center justify-center text-sm" data-icon="check">check</span>
+<span class="text-on-surface-variant">PNG download</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline size-5 flex items-center justify-center text-sm" data-icon="check">check</span>
+<span class="text-on-surface-variant">Ads</span>
+</li>
+<li class="flex items-center gap-3 opacity-30">
+<span class="material-symbols-outlined text-outline size-5 flex items-center justify-center text-sm" data-icon="close">close</span>
+<span class="text-on-surface-variant">Dynamic QR Tracking</span>
+</li>
+</ul>
+</div>
+<button class="mt-12 w-full py-4 border border-outline-variant/30 rounded-lg font-semibold text-on-surface hover:bg-surface-container-low transition-colors">
+                            Get Started
+                        </button>
+</div>
+</div>
+<!-- Premium Tier -->
+<div class="relative bg-gradient-to-br from-primary to-primary-container p-1 rounded-xl shadow-xl scale-105 z-10">
+<div class="bg-surface-container-lowest h-full p-10 rounded-lg flex flex-col">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full">
+                            Most Popular
+                        </div>
+<div class="mb-8">
+<h2 class="text-2xl font-bold mb-2">Premium</h2>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-extrabold">$12</span>
+<span class="text-on-surface-variant text-sm">/mo</span>
+</div>
+</div>
+<div class="flex-grow">
+<ul class="space-y-5">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary size-5 flex items-center justify-center text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-on-surface font-medium">Dynamic QR</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary size-5 flex items-center justify-center text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-on-surface font-medium">Full Analytics Dashboard</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary size-5 flex items-center justify-center text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-on-surface font-medium">No Ads</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary size-5 flex items-center justify-center text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-on-surface font-medium">SVG/PDF High-Res Exports</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary size-5 flex items-center justify-center text-sm" data-icon="check_circle" data-weight="fill">check_circle</span>
+<span class="text-on-surface font-medium">Custom Branding</span>
+</li>
+</ul>
+</div>
+<button class="mt-12 w-full py-4 gradient-button text-white rounded-lg font-bold shadow-lg shadow-primary/20 active:scale-[0.98] transition-all">
+                            Upgrade Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Credibility Section -->
+<section class="max-w-6xl mx-auto px-8 mb-32 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant/10 pt-20">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<h3 class="font-bold text-xl">Privacy-First</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Your data and your users' privacy are our highest priority. Encrypted connections and secure storage come standard.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="monitoring">monitoring</span>
+<h3 class="font-bold text-xl">Real-Time Insights</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Track scans by location, device type, and time. Understand your audience with high-fidelity digital artifacts.</p>
+</div>
+<div class="space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="history">history</span>
+<h3 class="font-bold text-xl">Unlimited History</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">We keep your records forever. Never lose track of your digital journey with our curated history vault.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#f9f9f9] dark:bg-slate-950 border-t border-opacity-10 border-[#c3c6d7]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col gap-2">
+<span class="text-lg font-bold text-[#434655]">EtherQR</span>
+<p class="font-['Inter'] text-sm text-[#434655]">© 2024 EtherQR. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Terms</a>
+<a class="font-['Inter'] text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Help Center</a>
+<a class="font-['Inter'] text-sm text-[#434655] hover:text-[#2563eb] transition-all" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>
